@@ -7,14 +7,14 @@
 		<link href="http://fonts.googleapis.com/css?family=Leckerli+One|Coustard:900" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" media="screen" href="css/screen.css" />
 	</head>
+	
 	<body>
-		
 		<h1>Volunteer Form</h1>
 
 		<form method="post" action="lab4formscript.php">
-		<p>My Info</p>
-		<fieldset>
-			<legend></legend>
+			<p>My Info</p>			
+			<fieldset>
+				<legend></legend>
 				<label for="firstname">First Name:</label>
 				<input type="text" name="first_name_field" id="firstname"/><br>
 				
@@ -27,24 +27,27 @@
 				<label for="email">Email Address</label>
 				<input type="email" name="email_field" id="email" pattern="^.+@.+$" /><br>
 				
-				<input type="radio" name="gender_field" value="male"/>   Male<br>
+				<label for="gender_field">Gender:</label>
+				<input type="radio" name="gender_field" value="male"/>   Male
 				<input type="radio" name="gender_field" value="female"/> Female<br>
 				
 				<label for="agerange">Age:</label>
 				<select name="age_field" id="agerange">
-					<option value="0">under 18</option>
-					<option value="1">18 - 24</option>
-					<option value="2">25 - 34</option>
-					<option value="3">35 - 44</option>
-					<option value="4">45 - 54</option>
-					<option value="5">55 - 64</option>
-					<option value="6">65 and over</option>
+					<option value="0">select</option>
+					<option value="1">under 18</option>
+					<option value="2">18 - 24</option>
+					<option value="3">25 - 34</option>
+					<option value="4">35 - 44</option>
+					<option value="5">45 - 54</option>
+					<option value="6">55 - 64</option>
+					<option value="7">65 and over</option>
 				</select>
 			</fieldset>
 			
 			<p>My Availability</>
 			<fieldset class="group"> 
-			<legend></legend>
+				<legend></legend>
+				<p>Days Available</p>
 				<ul class="checkbox"> 
 					<li><input type="checkbox" id="cb1" value="1" /><label for="cb1">Sunday</label></li> 
 					<li><input type="checkbox" id="cb2" value="2" /><label for="cb2">Monday</label></li> 
@@ -54,15 +57,13 @@
 					<li><input type="checkbox" id="cb6" value="6" /><label for="cb6>">Friday</label></li>
 					<li><input type="checkbox" id="cb7" value="7" /><label for="cb6>">Saturday</label></li>
 				</ul> 
-	
-			<p>Any Comments</p>
+				<p>Any Comments</p>
 				<textarea rows="6" cols="50" name="comments_field" id="comments"></textarea>
-			</fieldset>		
-			<input type="submit" name="submit" id="submit" value="Send Me" />
+			</fieldset>
+			
 			<input type="hidden" name="hidden_field " id="hidden" value="Gscott3"/>
+			<input type="submit" name="submit" id="submit" value="Send Me" />
 		</form>
-	
-				
 		
 	<main>
 	</main>
