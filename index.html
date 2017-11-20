@@ -6,67 +6,75 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
 		<link href="http://fonts.googleapis.com/css?family=Leckerli+One|Coustard:900" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" media="screen" href="css/screen.css" />
-	</head>
+
+		</head>
 	
 	<body>
 		<h1>Volunteer Form</h1>
-
-		<form method="post" action="lab4formscript.php">
+				
+    <form action="http://bloomingdale.sat.iit.edu/kriedan/lab3formscript.php" method="post">
 			<p>My Info</p>			
 			<fieldset>
 				<legend></legend>
 				<label for="firstname">First Name:</label>
-				<input type="text" name="first_name_field" id="firstname"/><br>
+				<input type="text" name="first_name_field" id="firstname" required/><br>
 				
 				<label for="lastname">Last Name:</label>
-				<input type="text" name="last_name_field" id="lastname"/><br>
+				<input type="text" name="last_name_field" id="lastname" required/><br>
 				
 				<label for="phone">Phone Number:</label>
-				<input type="text" name="phone_field" id="phone"/><br>
+				<input type="tel" name="phone_field" id="phone" required/><br>
 				
 				<label for="email">Email Address</label>
-				<input type="email" name="email_field" id="email" pattern="^.+@.+$" /><br>
+				<input type="email" name="email_field" id="email" pattern="^.+@.+$" size="30" required/><br>
 				
-				<label for="gender_field">Gender:</label>
-				<input type="radio" name="gender_field" value="male"/>   Male
-				<input type="radio" name="gender_field" value="female"/> Female<br>
+				<label for="gender1">Gender:</label>
+				<input type="radio" id="gender1" name="gender_field" value="male" required/>   Male
+				<input type="radio" id="gender2" name="gender_field" value="female" required/> Female<br>
 				
 				<label for="agerange">Age:</label>
-				<select name="age_field" id="agerange">
-					<option value="0">select</option>
-					<option value="1">under 18</option>
-					<option value="2">18 - 24</option>
-					<option value="3">25 - 34</option>
-					<option value="4">35 - 44</option>
-					<option value="5">45 - 54</option>
-					<option value="6">55 - 64</option>
-					<option value="7">65 and over</option>
+				<select name="age_field" id="agerange" required>
+					<option value="">select one</option>
+					<option value="Under-18">Under-18</option>
+					<option value="18-24">18-24</option>
+					<option value="25-34">25-34</option>
+					<option value="35-44">35-44</option>
+					<option value="45-54">45-54</option>
+					<option value="55-64">55-64</option>
+					<option value="65-and-Over">65-and-over</option>
 				</select>
 			</fieldset>
-			
-			<p>My Availability</>
-			<fieldset class="group"> 
-				<legend></legend>
-				<p>Days Available</p>
-				<ul class="checkbox"> 
-					<li><input type="checkbox" id="cb1" value="1" /><label for="cb1">Sunday</label></li> 
-					<li><input type="checkbox" id="cb2" value="2" /><label for="cb2">Monday</label></li> 
-					<li><input type="checkbox" id="cb3" value="3" /><label for="cb3">Tuesday</label></li> 
-					<li><input type="checkbox" id="cb4" value="4" /><label for="cb4">Wednesday</label></li> 
-					<li><input type="checkbox" id="cb5" value="5" /><label for="cb5">Thursday</label></li> 
-					<li><input type="checkbox" id="cb6" value="6" /><label for="cb6>">Friday</label></li>
-					<li><input type="checkbox" id="cb7" value="7" /><label for="cb6>">Saturday</label></li>
-				</ul> 
-				<p>Any Comments</p>
-				<textarea rows="6" cols="50" name="comments_field" id="comments"></textarea>
+		
+			<p>My Availability</p>
+			<fieldset class="group">
+			<legend></legend>
+			<div class="checkbox-group required">
+				<label for="cb1">Days Available</label>
+					<ul class="checkbox"> 
+						<li><input type="checkbox" id="cb1" name=available_field[0] value="Sunday"/><label for="cb1">Sunday</label></li> 
+						<li><input type="checkbox" id="cb2" name=available_field[1] value="Monday"/><label for="cb2">Monday</label></li> 
+						<li><input type="checkbox" id="cb3" name=available_field[2] value="Tuesday"/><label for="cb3">Tuesday</label></li> 
+						<li><input type="checkbox" id="cb4" name=available_field[3] value="Wednesday"/><label for="cb4">Wednesday</label></li> 
+						<li><input type="checkbox" id="cb5" name=available_field[4] value="Thursday"/><label for="cb5">Thursday</label></li> 
+						<li><input type="checkbox" id="cb6" name=available_field[5] value="Friday"/><label for="cb6">Friday</label></li>
+						<li><input type="checkbox" id="cb7" name=available_field[6] value="Saturday"/><label for="cb7">Saturday</label></li>
+					</ul> 
+			</div>
+			<p>Any Comments</p>
+			<textarea rows="6" cols="50" name="comments_field" id="comments"></textarea>
 			</fieldset>
-			
-			<input type="hidden" name="hidden_field " id="hidden" value="Gscott3"/>
+			<input type="hidden" name="hidden_field" id="hidden" value="Gscott3"/>		
 			<input type="submit" name="submit" id="submit" value="Send Me" />
 		</form>
 		
-	<main>
-	</main>
-		
+		<main></main>
+
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+		<script>
+			$( document ).ready(function() {
+			});
+		</script>
+
 	</body>
 </html>
+

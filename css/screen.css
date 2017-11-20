@@ -16,6 +16,13 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
  * 2. Remove the margin in Firefox and Safari.
  */
 
+ ul {
+		width: 200px;
+	}
+	ul :hover {
+		background-color: #c2c2c2;
+	}
+
 button,
 input,
 optgroup,
@@ -35,6 +42,9 @@ textarea {
 button,
 input { /* 1 */
   overflow: visible;
+}
+fieldset {
+	margin-bottom: 5px;
 }
 
 /**
